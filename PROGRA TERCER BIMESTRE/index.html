@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fútbol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos al sitio de Fútbol</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.marca.com/futbol/futbol-internacional.html">Noticias</a></li>
+                <li><a href="https://www.marca.com/futbol/primera/equipos.html">Equipos</a></li>
+                <li><a href="https://www.marca.com/resultados/futbol.html">Partidos</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="noticias">
+            <h2>Últimas Noticias</h2>
+            <article>
+                <h3>¿Cuándo juega España la final de fútbol de los Juegos Olímpicos?</h3>
+                <p>El partido entre España y Francia para determinar qué selección se cuelga la medalla de oro se disputa el próximo viernes 9 de agosto a las 18:00 horas (CET). La sede del encuentro será el Parc des Princes, en París.
+                    Te puede interesar</p>
+                    <img height="230" width="270" src="España.jpg" alt="Españita">
+            </article>
+            <article>
+                <h3>Día 1 de Mbappé en Valdebebas: primer objetivo, una 'rareza' en el vestuario blanco.</h3>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <p>Después de siete años... comienza la 'era Mbappé'. El francés ya ha aterrizado en Madrid tal como ha mostrado en sus redes sociales y mañana, 7 de agosto, se cierra un círculo después de muchas idas y venidas, rumores, enfados y negociaciones largas y complicadas. El crack francés pisará el césped de la Ciudad Real Madrid para arrancar su pretemporada, una que va enfocada a la posibilidad de conquistar su primer título con el Real Madrid: "Seguro que jugaré la Supercopa, pero depende del míster. Estaré listo. Sería el primer título y tengo ganas de jugar. Pero es para el míster esa pregunta", confesó el día de su presentación ante 80.000 personas en el Santiago Bernabéu</p>
+                <img height="230" width="270" src="Mbappe.jpg" alt="Kylian">
+            </article>
+        </section>
+
+        <section id="equipos">
+            <h2>Equipos</h2>
+            <ul>
+                <li>Real Madrid</li>
+                <img height="230" width="270" src="Real Madrid.jpeg" alt="real">
+                <li>Barcelona</li>
+                <img height="230" width="270" src="Barcelona.jpeg" alt="Kylian">
+                <li>Atletico de Madrid</li>
+                <img height="230" width="270" src="Atletico de madrid.jpeg" alt="Kylian">
+            </ul>
+        </section>
+
+        <section id="partidos">
+            <h2>Próximos Partidos</h2>
+            <ul>
+                <li>Partido 1: Real Madrid vs Chelsea</li>
+                <li>Partido 2: Barcelona vs Milan</li>
+            </ul>
+        </section>
+
+        <section id="metodo-pago">
+            <h2>Método de Pago</h2>
+            <form action="/submit-payment" method="post">
+                <label for="nombre">Nombre en la tarjeta:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="tarjeta">Número de la tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" required>
+                
+                <label for="expiracion">Fecha de expiración:</label>
+                <input type="text" id="expiracion" name="expiracion" placeholder="MM/AA" required>
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+                
+                <button type="submit">Pagar</button>
+            </form>
+        </section>
+
+        <section id="calificacion">
+            <h2>Calificación de la Página</h2>
+            <form action="/submit-rating" method="post">
+                <label for="calificacion">Califica nuestra página:</label>
+                <select id="calificacion" name="calificacion" required>
+                    <option value="5">5 - Excelente</option>
+                    <option value="4">4 - Muy buena</option>
+                    <option value="3">3 - Buena</option>
+                    <option value="2">2 - Regular</option>
+                    <option value="1">1 - Mala</option>
+                </select>
+                
+                <label for="comentarios">Comentarios:</label>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="acceso-cuenta">
+            <h2>Acceso a Cuenta</h2>
+            <div class="form-container">
+                <form action="/register" method="post">
+                    <h3>Registrarse</h3>
+                    <label for="reg-usuario">Usuario:</label>
+                    <input type="text" id="reg-usuario" name="reg-usuario" required>
+                    
+                    <label for="reg-email">Email:</label>
+                    <input type="email" id="reg-email" name="reg-email" required>
+                    
+                    <label for="reg-password">Contraseña:</label>
+                    <input type="password" id="reg-password" name="reg-password" required>
+                    
+                    <button type="submit">Registrarse</button>
+                </form>
+                
+                <form action="/login" method="post">
+                    <h3>Iniciar Sesión</h3>
+                    <label for="login-usuario">Usuario o Email:</label>
+                    <input type="text" id="login-usuario" name="login-usuario" required>
+                    
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" name="login-password" required>
+                    
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="comentarios">
+            <h2>Caja de Comentarios</h2>
+            <form action="/submit-comment" method="post">
+                <label for="nombre-comentario">Nombre:</label>
+                <input type="text" id="nombre-comentario" name="nombre-comentario" required>
+                
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea>
+                
+                <button type="submit">Enviar Comentario</button>
+            </form>
+        </section>
+    </main>
+
+
+</body>
+</html>
